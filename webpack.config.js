@@ -4,7 +4,7 @@ module.exports = {
 	entry: './src/index.js',
 	output: {
 		path: __dirname,
-		filename: 'wcpt-blocks/index.js',
+		filename: 'build/index.js',
 	},
 	module: {
 		loaders: [
