@@ -3,7 +3,7 @@
    Plugin Name: WCPT custom blocks
    description: >-
     wcpt custom plugin to add blocks
-   Version: 1.2.1
+   Version: 0.0.2
    Author: James Kim
    */ 
 function loadWcptBlock() {
