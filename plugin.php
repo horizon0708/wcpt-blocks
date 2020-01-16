@@ -9,7 +9,7 @@
 function loadWcptBlock() {
   wp_enqueue_script(
     'wcpt-custom-blocks',
-    plugin_dir_url(__FILE__) . '/build/index.js',
+    plugin_dir_url(__FILE__) . '/build/bundle.min.js',
     array('wp-blocks','wp-editor'),
     true
   );

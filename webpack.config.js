@@ -1,10 +1,13 @@
-var ZipPlugin = require("zip-webpack-plugin")
+const webpack = require("webpack")
 
 module.exports = {
-	entry: './src/index.js',
+	entry: {
+    "bundle": './src/index.js',
+    "bundle.min": "./src/index.js"
+  },
 	output: {
 		path: __dirname,
-		filename: 'build/index.js',
+    filename: "build/[name].js",
 	},
 	module: {
 		loaders: [
@@ -16,8 +19,9 @@ module.exports = {
 		],
   },
   plugins: [
-    new ZipPlugin({
-
+    new webpack.optimize.UglifyJsPlugin({
+      include: /\.min\.js$/,
+      minimize: true
     })
   ]
 };
